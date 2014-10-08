@@ -12,14 +12,16 @@ var fs        = require('fs');
 var _defaults = require('lodash.defaults');
 var merge     = require('recursive-merge');
 
-var options = _defaults({}, options, {
-  'modulesPath': require('path').resolve() + '/modules/',
-  'appRootDir': __dirname + '/../',
-});
+var options = {};
 
 var looptimeModule = {
-  init: function (app, boot) {
+  init: function (app, boot, configOptions) {
     var modelList = [];
+
+    options = _defaults({}, configOptions, {
+      'modulesPath': require('path').resolve() + '/modules/',
+      'appRootDir': require('path').resolve() + '/server/',
+    });
 
     modelList.push(boot.ConfigLoader.loadModels(__dirname, app.get('env')));
 
