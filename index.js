@@ -19,8 +19,8 @@ var looptimeModule = {
     var modelList = [];
 
     options = _defaults({}, configOptions, {
-      'modulesPath': require('path').resolve() + '/modules/',
-      'appRootDir': require('path').resolve() + '/server/',
+      'modulesPath': __dirname  + '/../../modules/',
+      'appRootDir': __dirname  + '/../../server/',
     });
 
     modelList.push(boot.ConfigLoader.loadModels(__dirname, app.get('env')));
