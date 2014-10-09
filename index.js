@@ -37,7 +37,7 @@ var looptimeModule = {
 
       // Load modules
       if (fs.existsSync(options.modulesPath + '/' + element + '/module.js')) {
-        app.module['module'][element] = require(options.modulesPath + element + '/module.js')(app);
+        app.module[element] = require(options.modulesPath + element + '/module.js')(app);
       }
     });
 
