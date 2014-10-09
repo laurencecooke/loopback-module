@@ -21,8 +21,8 @@ var looptimeModule = {
     app.module = {};
 
     options = _defaults({}, configOptions, {
-      'modulesPath': require('path').resolve() + '/modules/',
-      'appRootDir': require('path').resolve() + '/server/',
+      'modulesPath': __dirname  + '/../../modules/',
+      'appRootDir': __dirname  + '/../../server/'
     });
 
     if (! fs.existsSync(options.modulesPath)) {
