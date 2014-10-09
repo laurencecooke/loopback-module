@@ -43,6 +43,13 @@ var looptimeModule = {
 
     options.models = merge.apply(null, modelList);
   },
+  afterModelsConfigure: function (app) {
+    for (module in app.module) {
+      if (module.afterModelsConfigure) {
+        module.afterModelsConfigure();
+      }
+    }
+  },
   getBootOptions: function () {
     return options;
   }
