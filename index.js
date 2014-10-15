@@ -45,8 +45,8 @@ var looptimeModule = {
   },
   afterBoot: function (app) {
     for (module in app.module) {
-      if (module.afterBoot) {
-        module.afterBoot();
+      if (app.module[module].afterBoot) {
+        app.module[module].afterBoot();
       }
     }
   },
