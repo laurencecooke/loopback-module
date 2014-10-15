@@ -29,7 +29,7 @@ var looptimeModule = {
       return;
     };
 
-    modelList.push(boot.ConfigLoader.loadModels(__dirname, app.get('env')));
+    modelList.push(boot.ConfigLoader.loadModels(options.appRootDir, app.get('env')));
 
     fs.readdirSync(options.modulesPath).forEach(function (element) {
       // Load models
