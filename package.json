@@ -1,6 +1,6 @@
 {
   "name": "looptime-module",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Adds support of modues to loopback application",
   "keywords": [
     "console",
@@ -17,9 +17,9 @@
     "recursive-merge": "1.2.0"
   },
   "bugs": {
-    "url": "https://github.com/strongloop/looptime-module/issues"
+    "url": "https://github.com/cajoy/looptime-module/issues"
   },
-  "homepage": "https://github.com/strongloop/looptime-module",
+  "homepage": "https://github.com/cajoy/looptime-module",
   "_npmUser": {
     "name": "cajoy",
     "email": "cajoy.dev@gmail.com"
@@ -49,6 +49,5 @@
     "tarball": "http://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz",
-  "readme": "ERROR: No README data found!"
+  "_resolved": "https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz"
 }
