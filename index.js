@@ -22,7 +22,8 @@ var looptimeModule = {
 
     options = _defaults({}, configOptions, {
       'modulesPath': __dirname  + '/../../modules/',
-      'appRootDir': __dirname  + '/../../server/'
+      'appRootDir': __dirname  + '/../../server/',
+      'npmModuleList': []
     });
 
     if (! fs.existsSync(options.modulesPath)) {
@@ -36,10 +37,24 @@ var looptimeModule = {
       modelList.push(boot.ConfigLoader.loadModels(options.modulesPath + element, app.get('env')));
 
       // Load modules
-      if (fs.existsSync(options.modulesPath + '/' + element + '/module.js')) {
-        app.module[element] = require(options.modulesPath + element + '/module.js')(app);
+      if (fs.existsSync(options.modulesPath + '/' + element + '/index.js')) {
+        app.module[element] = require(options.modulesPath + element + '/index.js')(app);
       }
     });
+
+    options.npmModuleList.forEach(function (element) {
+      app.module[element] = require(element)(app);
+
+      var modelsConfig = require(app.module[element].getPath() + '/model-config.json');
+
+      modelsConfig._meta = {
+        sources: [
+          app.module[element].getPath() + '/models/'
+        ]
+      }
+
+      modelList.push(modelsConfig);
+    })
 
     options.models = merge.apply(null, modelList);
   },
