@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.1.2
+3 info using node@v0.10.31
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/oleksiistrutsynskyi/Documents/looptime-module',
+8 silly cache add   type: 'local' }
+9 verbose cache add local package /Users/oleksiistrutsynskyi/Documents/looptime-module
+10 verbose tar pack [ '/Users/oleksiistrutsynskyi/.npm/looptime-module/0.1.0/package.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /Users/oleksiistrutsynskyi/.npm/looptime-module/0.1.0/package.tgz
+12 verbose folder .
+13 info prepublish looptime-module@0.1.0
+14 verbose addLocalTarball adding from inside cache /Users/oleksiistrutsynskyi/.npm/looptime-module/0.1.0/package.tgz
+15 silly publish { name: 'looptime-module',
+15 silly publish   version: '0.1.0',
+15 silly publish   description: 'Adds support of modues to loopback application',
+15 silly publish   keywords: [ 'console', 'modules' ],
+15 silly publish   repository: { type: 'git', url: 'https://github.com/cajoy/looptime-module' },
+15 silly publish   main: 'index.js',
+15 silly publish   dependencies:
+15 silly publish    { minimist: '^1.1.0',
+15 silly publish      'lodash.defaults': '^2.4.1',
+15 silly publish      'recursive-merge': '1.2.0' },
+15 silly publish   bugs: { url: 'https://github.com/cajoy/looptime-module/issues' },
+15 silly publish   homepage: 'https://github.com/cajoy/looptime-module',
+15 silly publish   _npmUser: { name: 'cajoy', email: 'cajoy.dev@gmail.com' },
+15 silly publish   maintainers: [ { name: 'cajoy', email: 'cajoy.dev@gmail.com' } ],
+15 silly publish   devDependencies: {},
+15 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+15 silly publish   author: { name: 'Alex Struc', email: 'cajoy.dev@gmail.com' },
+15 silly publish   license: 'ISC',
+15 silly publish   gitHead: '3ce9fff9a26d0a2c61688c26575988c42772bf94',
+15 silly publish   _id: 'looptime-module@0.1.0',
+15 silly publish   _shasum: '006142e034c6418d7e5843fe184cd20335ca0121',
+15 silly publish   _from: '.',
+15 silly publish   _npmVersion: '2.0.0-alpha-5',
+15 silly publish   dist:
+15 silly publish    { shasum: 'e8377cda8764d4da853187a09700b3ed2baac11a',
+15 silly publish      tarball: 'http://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz' },
+15 silly publish   directories: {},
+15 silly publish   _resolved: 'https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz',
+15 silly publish   readme: 'looptime-module\n===============\n\nAdd support of modules to Loopback application\n',
+15 silly publish   readmeFilename: 'README.md' }
+16 verbose mapToRegistry name looptime-module
+17 verbose mapToRegistry uri https://registry.npmjs.org/looptime-module
+18 verbose publish registryBase https://registry.npmjs.org/
+19 verbose request on initialization, where is /looptime-module
+20 verbose request after pass 1, where is /looptime-module
+21 verbose request url raw /looptime-module
+22 verbose request resolving registry [ 'https://registry.npmjs.org/', './looptime-module' ]
+23 verbose request after pass 2, where is https://registry.npmjs.org/looptime-module
+24 verbose request sending authorization for write operation
+25 info attempt registry request try #1 at 13:22:31
+26 verbose request id 0980f3ede66fd991
+27 http request PUT https://registry.npmjs.org/looptime-module
+28 http 403 https://registry.npmjs.org/looptime-module
+29 verbose headers { date: 'Fri, 07 Nov 2014 18:22:31 GMT',
+29 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=60',
+29 verbose headers   'content-length': '2860',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   'x-served-by': 'cache-dfw1824-DFW',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1415384551.608244,VS0,VE67',
+29 verbose headers   'keep-alive': 'timeout=10, max=50',
+29 verbose headers   connection: 'Keep-Alive' }
+30 error publish Failed PUT 403
+31 verbose stack Error: forbidden cannot modify pre-existing version: 0.1.0
+31 verbose stack old={"name":"looptime-module","version":"0.1.0","description":"Adds support of modues to loopback application","keywords":["console","modules"],"repository":{"type":"git","url":"https://github.com/cajoy/looptime-module"},"main":"index.js","dependencies":{"minimist":"^1.1.0","lodash.defaults":"^2.4.1","recursive-merge":"1.2.0"},"bugs":{"url":"https://github.com/cajoy/looptime-module/issues"},"homepage":"https://github.com/cajoy/looptime-module","_npmUser":{"name":"cajoy","email":"cajoy.dev@gmail.com"},"maintainers":[{"name":"cajoy","email":"cajoy.dev@gmail.com"}],"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Alex Struc","email":"cajoy.dev@gmail.com"},"license":"ISC","gitHead":"3ce9fff9a26d0a2c61688c26575988c42772bf94","_id":"looptime-module@0.1.0","_shasum":"ad6347ca81c22c0320e88194e690b8bc0b7d99dd","_from":".","_npmVersion":"2.1.2","dist":{"shasum":"ad6347ca81c22c0320e88194e690b8bc0b7d99dd","tarball":"http://registry.npmjs.org/looptime-module/-/looptime-module-0.1.0.tgz"},"directories":{},"_resolved":"https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz","_nodeVersion":"0.10.31"}
+31 verbose stack new={"name":"looptime-module","version":"0.1.0","description":"Adds support of modues to loopback application","keywords":["console","modules"],"repository":{"type":"git","url":"https://github.com/cajoy/looptime-module"},"main":"index.js","dependencies":{"minimist":"^1.1.0","lodash.defaults":"^2.4.1","recursive-merge":"1.2.0"},"bugs":{"url":"https://github.com/cajoy/looptime-module/issues"},"homepage":"https://github.com/cajoy/looptime-module","_npmUser":{"name":"cajoy","email":"cajoy.dev@gmail.com"},"maintainers":[{"name":"cajoy","email":"cajoy.dev@gmail.com"}],"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Alex Struc","email":"cajoy.dev@gmail.com"},"license":"ISC","gitHead":"3ce9fff9a26d0a2c61688c26575988c42772bf94","_id":"looptime-module@0.1.0","_shasum":"006142e034c6418d7e5843fe184cd20335ca0121","_from":".","_npmVersion":"2.1.2","dist":{"shasum":"006142e034c6418d7e5843fe184cd20335ca0121","tarball":"http://registry.npmjs.org/looptime-module/-/looptime-module-0.1.0.tgz"},"directories":{},"_resolved":"https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz","readme":"looptime-module\u000a===============\u000a\u000aAdd support of modules to Loopback application\u000a","readmeFilename":"README.md","_nodeVersion":"0.10.31"}: looptime-module
+31 verbose stack     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:260:14)
+31 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:197:65)
+31 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:199:22)
+31 verbose stack     at Request.emit (events.js:98:17)
+31 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:1160:14)
+31 verbose stack     at Request.emit (events.js:117:20)
+31 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:1111:12)
+31 verbose stack     at IncomingMessage.emit (events.js:117:20)
+31 verbose stack     at _stream_readable.js:943:16
+31 verbose stack     at process._tickCallback (node.js:419:13)
+32 verbose statusCode 403
+33 verbose pkgid looptime-module
+34 verbose cwd /Users/oleksiistrutsynskyi/Documents/looptime-module
+35 error Darwin 14.0.0
+36 error argv "node" "/usr/local/bin/npm" "publish"
+37 error node v0.10.31
+38 error npm  v2.1.2
+39 error code E403
+40 error forbidden cannot modify pre-existing version: 0.1.0
+40 error old={"name":"looptime-module","version":"0.1.0","description":"Adds support of modues to loopback application","keywords":["console","modules"],"repository":{"type":"git","url":"https://github.com/cajoy/looptime-module"},"main":"index.js","dependencies":{"minimist":"^1.1.0","lodash.defaults":"^2.4.1","recursive-merge":"1.2.0"},"bugs":{"url":"https://github.com/cajoy/looptime-module/issues"},"homepage":"https://github.com/cajoy/looptime-module","_npmUser":{"name":"cajoy","email":"cajoy.dev@gmail.com"},"maintainers":[{"name":"cajoy","email":"cajoy.dev@gmail.com"}],"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Alex Struc","email":"cajoy.dev@gmail.com"},"license":"ISC","gitHead":"3ce9fff9a26d0a2c61688c26575988c42772bf94","_id":"looptime-module@0.1.0","_shasum":"ad6347ca81c22c0320e88194e690b8bc0b7d99dd","_from":".","_npmVersion":"2.1.2","dist":{"shasum":"ad6347ca81c22c0320e88194e690b8bc0b7d99dd","tarball":"http://registry.npmjs.org/looptime-module/-/looptime-module-0.1.0.tgz"},"directories":{},"_resolved":"https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz","_nodeVersion":"0.10.31"}
+40 error new={"name":"looptime-module","version":"0.1.0","description":"Adds support of modues to loopback application","keywords":["console","modules"],"repository":{"type":"git","url":"https://github.com/cajoy/looptime-module"},"main":"index.js","dependencies":{"minimist":"^1.1.0","lodash.defaults":"^2.4.1","recursive-merge":"1.2.0"},"bugs":{"url":"https://github.com/cajoy/looptime-module/issues"},"homepage":"https://github.com/cajoy/looptime-module","_npmUser":{"name":"cajoy","email":"cajoy.dev@gmail.com"},"maintainers":[{"name":"cajoy","email":"cajoy.dev@gmail.com"}],"devDependencies":{},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":{"name":"Alex Struc","email":"cajoy.dev@gmail.com"},"license":"ISC","gitHead":"3ce9fff9a26d0a2c61688c26575988c42772bf94","_id":"looptime-module@0.1.0","_shasum":"006142e034c6418d7e5843fe184cd20335ca0121","_from":".","_npmVersion":"2.1.2","dist":{"shasum":"006142e034c6418d7e5843fe184cd20335ca0121","tarball":"http://registry.npmjs.org/looptime-module/-/looptime-module-0.1.0.tgz"},"directories":{},"_resolved":"https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz","readme":"looptime-module\u000a===============\u000a\u000aAdd support of modules to Loopback application\u000a","readmeFilename":"README.md","_nodeVersion":"0.10.31"}: looptime-module
+41 error If you need help, you may report this error at:
+41 error     <http://github.com/npm/npm/issues>
+42 verbose exit [ 1, true ]
