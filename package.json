@@ -40,14 +40,16 @@
   },
   "license": "ISC",
   "gitHead": "3ce9fff9a26d0a2c61688c26575988c42772bf94",
-  "_id": "looptime-module@0.0.3",
-  "_shasum": "e8377cda8764d4da853187a09700b3ed2baac11a",
-  "_from": "looptime-module@0.0.3",
+  "_id": "looptime-module@0.1.0",
+  "_shasum": "ad6347ca81c22c0320e88194e690b8bc0b7d99dd",
+  "_from": "looptime-module@0.1.0",
   "_npmVersion": "2.0.0-alpha-5",
   "dist": {
     "shasum": "e8377cda8764d4da853187a09700b3ed2baac11a",
     "tarball": "http://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz"
+  "_resolved": "https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz",
+  "readme": "looptime-module\n===============\n\nAdd support of modules to Loopback application\n",
+  "readmeFilename": "README.md"
 }
