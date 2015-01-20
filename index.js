@@ -65,6 +65,13 @@ var looptimeModule = {
       }
     }
   },
+  resetAndLoadFixtures: function (app) {
+    for (module in app.module) {
+      if (app.module[module].resetAndLoadFixtures) {
+        app.module[module].resetAndLoadFixtures();
+      }
+    }
+  },
   getBootOptions: function () {
     return options;
   }
