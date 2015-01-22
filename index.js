@@ -66,11 +66,25 @@ var looptimeModule = {
     }
   },
   resetAndLoadFixtures: function (app) {
+    var resetModulesArray = [];
+
     for (module in app.module) {
       if (app.module[module].resetAndLoadFixtures) {
-        app.module[module].resetAndLoadFixtures();
+        resetModulesArray.push(app.module[module].resetAndLoadFixtures());
       }
     }
+
+    return Promise.all(resetModulesArray)
+      .then (function (done) {
+        console.log('Database reseted');
+
+        return true;
+      })
+      .catch (function (err) {
+        consle.log('error', err);
+
+        return false;
+      })
   },
   getBootOptions: function () {
     return options;
