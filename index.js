@@ -76,12 +76,12 @@ var looptimeModule = {
 
     return Promise.all(resetModulesArray)
       .then (function (done) {
-        console.log('Database reseted');
+        console.log('Database refreshed');
 
         return true;
       })
       .catch (function (err) {
-        consle.log('error', err);
+        console.log('error', err);
 
         return false;
       })
