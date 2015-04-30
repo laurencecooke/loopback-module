@@ -1,6 +1,6 @@
 {
-  "name": "looptime-module",
-  "version": "0.1.5",
+  "name": "loopback-module",
+  "version": "0.2.0",
   "description": "Adds support of modues to loopback application",
   "keywords": [
     "console",
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cajoy/looptime-module"
+    "url": "https://github.com/cajoy/loopback-module"
   },
   "main": "index.js",
   "dependencies": {
@@ -17,9 +17,9 @@
     "recursive-merge": "1.2.0"
   },
   "bugs": {
-    "url": "https://github.com/cajoy/looptime-module/issues"
+    "url": "https://github.com/cajoy/loopback-module/issues"
   },
-  "homepage": "https://github.com/cajoy/looptime-module",
+  "homepage": "https://github.com/cajoy/loopback-module",
   "_npmUser": {
     "name": "cajoy",
     "email": "cajoy.dev@gmail.com"
@@ -40,16 +40,16 @@
   },
   "license": "ISC",
   "gitHead": "3ce9fff9a26d0a2c61688c26575988c42772bf94",
-  "_id": "looptime-module@0.1.0",
+  "_id": "loopback-module@0.1.0",
   "_shasum": "ad6347ca81c22c0320e88194e690b8bc0b7d99dd",
-  "_from": "looptime-module@0.1.0",
+  "_from": "loopback-module@0.1.0",
   "_npmVersion": "2.0.0-alpha-5",
   "dist": {
     "shasum": "e8377cda8764d4da853187a09700b3ed2baac11a",
-    "tarball": "http://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz"
+    "tarball": "http://registry.npmjs.org/loopback-module/-/loopback-module-0.0.3.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/looptime-module/-/looptime-module-0.0.3.tgz",
-  "readme": "looptime-module\n===============\n\nAdd support of modules to Loopback application\n",
+  "_resolved": "https://registry.npmjs.org/loopback-module/-/loopback-module-0.0.3.tgz",
+  "readme": "loopback-module\n===============\n\nAdd support of modules to Loopback application\n",
   "readmeFilename": "README.md"
 }

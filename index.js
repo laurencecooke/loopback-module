@@ -13,10 +13,13 @@ var _defaults = require('lodash.defaults');
 var merge     = require('recursive-merge');
 
 var options = {};
+var fixtureList = {};
 
-var looptimeModule = {
+var loopbackModule = {
   init: function (app, boot, configOptions) {
     var modelList = [];
+
+    this.app = app;
 
     app.module = {};
 
@@ -58,6 +61,32 @@ var looptimeModule = {
 
     options.models = merge.apply(null, modelList);
   },
+  fixtureLoaded: function (id, data) {
+    fixtureList[id] = data;
+
+    this.app.log('fixture.loaded').debug({id: id, data: data});
+
+    this.app.emit('fixture.loaded', id);
+  },
+  onFixtureLoaded: function (id) {
+    var self = this;
+
+    if (fixtureList[id]) {
+      return Promise.resolve(fixtureList[id]);
+    }
+
+    return new Promise(function (resolve) {
+      self.app.log('fixture.onLoaded').debug({id: id});
+
+      self.app.once('fixture.loaded', function (fixtureId) {
+        self.app.log('fixture.onLoaded.resolved').debug({id: id});
+
+        if (id == fixtureId) {
+          resolve (fixtureList[id]);
+        }
+      });
+    })
+  },
   afterBoot: function (app) {
     for (module in app.module) {
       if (app.module[module].afterBoot) {
@@ -89,4 +118,4 @@ var looptimeModule = {
   }
 };
 
-module.exports = looptimeModule;
+module.exports = loopbackModule;
