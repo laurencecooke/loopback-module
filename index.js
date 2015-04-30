@@ -78,10 +78,10 @@ var loopbackModule = {
     return new Promise(function (resolve) {
       self.app.log('fixture.onLoaded').debug({id: id});
 
-      self.app.once('fixture.loaded', function (fixtureId) {
-        self.app.log('fixture.onLoaded.resolved').debug({id: id});
-
+      self.app.on('fixture.loaded', function (fixtureId) {
         if (id == fixtureId) {
+          self.app.log('fixture.onLoaded.resolved').debug({id: id});
+
           resolve (fixtureList[id]);
         }
       });
@@ -99,6 +99,8 @@ var loopbackModule = {
 
     for (module in app.module) {
       if (app.module[module].resetAndLoadFixtures) {
+        this.app.log('fixture.loading').debug({id: module});
+
         resetModulesArray.push(app.module[module].resetAndLoadFixtures());
       }
     }
