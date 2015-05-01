@@ -96,6 +96,7 @@ var loopbackModule = {
   },
   resetAndLoadFixtures: function (app) {
     var resetModulesArray = [];
+    fixtureList = [];
 
     for (module in app.module) {
       if (app.module[module].resetAndLoadFixtures) {
