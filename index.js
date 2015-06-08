@@ -106,6 +106,8 @@ var loopbackModule = {
     var resetModulesArray = [];
     fixtureList = [];
 
+    app.removeAllListeners();
+
     for (module in app.module) {
       if (app.module[module].resetAndLoadFixtures) {
         this.app.log('fixture.loading').debug({id: module});
