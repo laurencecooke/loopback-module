@@ -62,25 +62,33 @@ var loopbackModule = {
     options.models = merge.apply(null, modelList);
   },
   fixtureLoaded: function (id, data) {
+    if (! data) {
+      console.log("Fixture resolution should have data", data, id)
+
+      process.exit(1)
+    }
+
     fixtureList[id] = data;
 
-    this.app.log('fixture.loaded').debug({id: id, data: data});
-
     this.app.emit('fixture.loaded', id);
+
+    this.app.log('fixture.loaded').debug({id: id, data: data});
   },
   onFixtureLoaded: function (id) {
     var self = this;
 
-    if (fixtureList[id]) {
-      return Promise.resolve(fixtureList[id]);
-    }
-
     return new Promise(function (resolve) {
       self.app.log('fixture.onLoaded').debug({id: id});
 
+      if (fixtureList[id]) {
+        self.app.log('fixture.onLoaded.resolved.memory').debug({id: id});
+
+        return resolve(fixtureList[id]);
+      }
+
       self.app.on('fixture.loaded', function (fixtureId) {
         if (id == fixtureId) {
-          self.app.log('fixture.onLoaded.resolved').debug({id: id});
+          self.app.log('fixture.onLoaded.resolved.event').debug({id: id});
 
           resolve (fixtureList[id]);
         }
