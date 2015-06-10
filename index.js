@@ -102,29 +102,37 @@ var loopbackModule = {
       }
     }
   },
-  resetAndLoadFixtures: function (app) {
+  resetAndLoadFixtures: function (app, dataSources) {
     var resetModulesArray = [];
     fixtureList = [];
 
-    app.removeAllListeners();
-
-    for (module in app.module) {
-      if (app.module[module].resetAndLoadFixtures) {
-        this.app.log('fixture.loading').debug({id: module});
-
-        resetModulesArray.push(app.module[module].resetAndLoadFixtures());
-      }
+    if (! dataSources) {
+      dataSources = ['db'];
     }
 
-    return Promise.all(resetModulesArray)
-      .then (function (done) {
-        console.log('Database reloaded');
+    this.app.removeAllListeners();
 
-        return Promise.resolve(true);
+    var self = this;
+
+    return new Promise(function (resolve, reject) {
+      self.app.dataSources[dataSources[0]].automigrate(function () {
+        for (module in app.module) {
+          if (app.module[module].resetAndLoadFixtures) {
+            self.app.log('fixture.loading').debug({id: module});
+
+            resetModulesArray.push(app.module[module].resetAndLoadFixtures());
+          }
+        }
+
+        Promise.all(resetModulesArray)
+          .then (function (done) {
+            console.log('Database reloaded');
+
+            resolve(true);
+          })
+          .catch(reject);
       })
-      .catch (function (err) {
-        return Promise.reject(err);
-      })
+    })
   },
   getBootOptions: function () {
     return options;
