@@ -1,6 +1,6 @@
 {
   "name": "loopback-module",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Adds support of modues to loopback application",
   "keywords": [
     "console",
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cajoy/loopback-module"
+    "url": "git+https://github.com/cajoy/loopback-module.git"
   },
   "main": "index.js",
   "dependencies": {
@@ -40,9 +40,9 @@
   },
   "license": "ISC",
   "gitHead": "3ce9fff9a26d0a2c61688c26575988c42772bf94",
-  "_id": "loopback-module@0.1.0",
-  "_shasum": "ad6347ca81c22c0320e88194e690b8bc0b7d99dd",
-  "_from": "loopback-module@0.1.0",
+  "_id": "loopback-module@0.2.5",
+  "_shasum": "d0569b340d463d76902cd024830af219582bb662",
+  "_from": "loopback-module@0.2.5",
   "_npmVersion": "2.0.0-alpha-5",
   "dist": {
     "shasum": "e8377cda8764d4da853187a09700b3ed2baac11a",

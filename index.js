@@ -42,6 +42,13 @@ var loopbackModule = {
       // Load modules
       if (fs.existsSync(options.modulesPath + '/' + element + '/index.js')) {
         app.module[element] = require(options.modulesPath + element + '/index.js')(app);
+      } else {
+        return;
+      }
+
+      // Load errors
+      if (fs.existsSync(options.modulesPath + '/' + element + '/errors/data.json')) {
+        app.module[element].errors = require(options.modulesPath + '/' + element + '/errors/data.json');
       }
     });
 
